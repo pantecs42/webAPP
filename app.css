@@ -1,0 +1,79 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+.status-message {
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.images-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: calc(80% - 20px);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.input-field {
+  width: 100%;
+  height: 44px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: linear-gradient(0deg, rgba(208, 208, 208, 0.50) 0%, rgba(208, 208, 208, 0.50) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%);
+  box-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.10) inset;
+  border-radius: 12px;
+  color: #545454;
+  font-size: 17px;
+  font-family: 'SF Pro', sans-serif;
+  font-weight: 510;
+  line-height: 22px;
+  word-wrap: break-word;
+  margin-right: 10px;
+}
+
+.submit-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #61dafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.submit-button.disabled {
+  pointer-events: none;
+}
