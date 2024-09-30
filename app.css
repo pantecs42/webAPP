@@ -5,22 +5,24 @@
   height: 100vh;
   padding: 20px;
   position: relative;
+  overflow: hidden; /* Запретить прокрутку для .App */
 }
 
 .status-message {
   text-align: center;
-  position: absolute;
+  position: fixed; /* Измените на fixed */
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
   font-weight: bold;
   color: #333;
+  z-index: 1; /* Обеспечить, чтобы надпись была выше других элементов */
 }
 
 .images-container {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; /* Только этот контейнер может прокручиваться */
   margin-bottom: 20px;
 }
 
@@ -40,7 +42,7 @@
   display: flex;
   align-items: center;
   width: calc(80% - 20px);
-  position: fixed;
+  position: fixed; /* Оставьте фиксированным */
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
