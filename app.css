@@ -3,14 +3,15 @@
   flex-direction: column;
   justify-content: flex-end;
   height: 100vh;
-  padding: 20px;
+  padding: 250px 50px; /* Отступы сверху и снизу 250px, слева и справа 50px */
   position: relative;
   overflow: hidden; /* Запретить прокрутку для .App */
+  text-align: center;
 }
 
 .status-message {
   text-align: center;
-  position: fixed; /* Измените на fixed */
+  position: fixed; /* Оставляем фиксированным */
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -20,32 +21,17 @@
   z-index: 1; /* Обеспечить, чтобы надпись была выше других элементов */
 }
 
-.images-container {
-  flex: 1;
-  overflow-y: auto; /* Только этот контейнер может прокручиваться */
-  margin-bottom: 20px;
-}
 
-.images-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.image {
-  width: 200px;
-  height: auto;
-  margin: 10px;
-}
 
 .input-container {
   display: flex;
   align-items: center;
   width: calc(80% - 20px);
   position: fixed; /* Оставьте фиксированным */
-  bottom: 20px;
+  bottom: 50px; /* Отступ от низа 50 пикселей */
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 50px; /* Отступ сверху для контейнера */
 }
 
 .input-field {
@@ -79,3 +65,30 @@
 .submit-button.disabled {
   pointer-events: none;
 }
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Убедитесь, что модальное окно выше других элементов */
+}
+
+.modal-content {
+  background-color: #ffcc00; /* Цвет окна */
+  padding: 20px; /* Отступы внутри окна */
+  border-radius: 8px;
+  width: calc(100% - 100px); /* Полная ширина с учетом отступов */
+  max-width: 100%; /* Максимальная ширина окна */
+  height: calc(80% - 100px); /* Высота окна */
+  margin: 250px 0; /* Отступы по 50 пикселей сверху и снизу */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
